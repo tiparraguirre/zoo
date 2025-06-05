@@ -31,14 +31,14 @@ module Animales
     end
 
     # metodo comer , verifica si su alimento esta en  en su metodo alimentos_preferidos
-    # @params alimento [String] necesita un alimento para pasarle a alimentos_preferidos
+    # @params Alimento.nombre[String] necesita un alimento para pasarle a alimentos_preferidos
     # @return [Boolean] true si esta en alimentos_preferidos, false si no
     def le_gusta?(alimento)
       alimentos_preferidos.include?(alimento)
     end
    
     # metodo alimentar , cambia el estado comio , a true si el animal llego a sus kcal diarias
-    # @params Alimento.nombre [String] alimento que se le ofrece al animal
+    # @params Alimento.nombre[String] alimento que se le ofrece al animal
     def alimentar(alimento)
        
       return false unless le_gusta?(alimento.nombre)

@@ -8,40 +8,41 @@ class Zoologico
   end
 
   # Agregamos al animal al registro
-  # @params[Animal] animal en cuestion
+  # @params animal[Animal] animal en cuestion
   def agregar_animal(animal)
     @animales << animal    
   end
 
   # Metodo para sacar un animal del Zoologico
-  # @params Animal [Object] animal en cuestion
+  # @params animal[Animal] animal en cuestion
   def eliminar_animal(animal)
     @animales.delete(animal)
   end
 
   # Agregamos alimentos al registro de alimentos
-  # @params[String] Alimento que quiero agregar
+  # @params alimento [Alimento] Alimento que quiero agregar
   def agregar_alimento(alimento)
     @alimentos << alimento
   end
 
   # Agregamos Stock al alimento 
-  # @params alimento,cantidad [Object,Number] alimento en cuestion y cantidad a agregar 
+  # @params alimento [Alimento] Alimento en cuestion
+# @params cantidad [Number] Cantidad de alimento a agregar
   def agregar_stock(alimento,cantidad)
     alimento.sumar_cantidad(cantidad)
   end
 
   
   # Agregamos Stock al alimento 
-  # @params alimento,cantidad [Object,Number] alimento en cuestion y cantidad a sacar
+  # @params alimento[Object] Alimento en cuestion
+  # @params cantidad[Number] Cantidad de alimento a sacar
   def sacar_stock(alimento,cantidad)
     alimento.sacar_cantidad(cantidad)
   end
-
- 
  
   # Metodo para transeferir un animal a otro zoologico
-  # @params Animal[Object], Zoologico[Object], Animal que se quiere transeferir y Zoologico destino
+  # @params animal[Animal] animal que se quiere transferir_animal
+  # @params zoo_destino[Zoologico] zoologico a transeferir 
   # @return animal[Animal]
   def transferir_animal(animal,zoo_destino)
     eliminar_animal(animal)
@@ -49,7 +50,7 @@ class Zoologico
   end
 
   # metodo para saber el estado de los animales , si comieron o no
-  # @return estado_animales [hash] hash con dos claves :alimentados y :no_alimentadoss a los que los animales van em base a si comieron o no
+  # @return estado_animales[hash] hash con dos claves :alimentados y :no_alimentadoss a los que los animales van em base a si comieron o no
   def estado_animales
     estado_animales = {
       alimentados: [],
