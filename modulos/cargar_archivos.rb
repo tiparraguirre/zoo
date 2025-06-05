@@ -1,0 +1,15 @@
+# Carga todos los módulos necesarios para el zoológico.
+require_relative 'animales/class_animal'
+require_relative 'alimentos/alimento'
+
+require_relative 'animales/leon'
+require_relative 'animales/jirafa'
+require_relative 'animales/pinguino'
+require_relative 'animales/cerdo'
+require_relative 'animales/conejo'
+require_relative 'zoologico'
+require_relative 'alimentos/carnes'
+require_relative 'alimentos/hojas'
+require_relative 'alimentos/pasto'
+require_relative 'alimentos/pescado'
+require_relative 'alimentos/zanahoria'
