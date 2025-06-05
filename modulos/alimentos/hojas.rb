@@ -4,7 +4,7 @@ module Alimentos
 	class Hojas < Alimento
 
 		# inicializamos un nuevo alimento con su nombre y su cantidad 
-		# @return Hojas[Object]
+		# @return [Hojas]
 		def initialize
 			@nombre = "Hojas"
 			self.cantidad = 0

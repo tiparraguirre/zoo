@@ -15,14 +15,14 @@ module Alimentos
 			end
 			
 			# metodo para sumar cantidad
-			# @params cantidad_agregada[Number] cantidad a agregar
+			# @params cantidad_agregada [Number] cantidad a agregar
 			# return [@cantidad]
 			def sumar_cantidad(cantidad_agregada)
 				self.cantidad +=(cantidad_agregada)
 			end
 
 			# metodo para sacar cantidad
-			# @params cantidad_sacada[Number] cantidad a sacar
+			# @params cantidad_sacada [Number] cantidad a sacar
 			# @return [@cantidad]
 			def sacar_cantidad(cantidad_sacada)
 				return false if cantidad_sacada > @cantidad

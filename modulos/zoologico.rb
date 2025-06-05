@@ -8,13 +8,13 @@ class Zoologico
   end
 
   # Agregamos al animal al registro
-  # @params animal[Animal] animal en cuestion
+  # @params animal [Animal] animal en cuestion
   def agregar_animal(animal)
     @animales << animal    
   end
 
   # Metodo para sacar un animal del Zoologico
-  # @params animal[Animal] animal en cuestion
+  # @params animal [Animal] animal en cuestion
   def eliminar_animal(animal)
     @animales.delete(animal)
   end
@@ -34,23 +34,23 @@ class Zoologico
 
   
   # Agregamos Stock al alimento 
-  # @params alimento[Object] Alimento en cuestion
-  # @params cantidad[Number] Cantidad de alimento a sacar
+  # @params alimento [Alimento] Alimento en cuestion
+  # @params cantidad [Number] Cantidad de alimento a sacar
   def sacar_stock(alimento,cantidad)
     alimento.sacar_cantidad(cantidad)
   end
  
   # Metodo para transeferir un animal a otro zoologico
-  # @params animal[Animal] animal que se quiere transferir_animal
-  # @params zoo_destino[Zoologico] zoologico a transeferir 
-  # @return animal[Animal]
+  # @params animal [Animal] animal que se quiere transferir_animal
+  # @params zoo_destino [Zoologico] zoologico a transeferir 
+  # @return animal [Animal]
   def transferir_animal(animal,zoo_destino)
     eliminar_animal(animal)
     zoo_destino.agregar_animal(animal)
   end
 
   # metodo para saber el estado de los animales , si comieron o no
-  # @return estado_animales[hash] hash con dos claves :alimentados y :no_alimentadoss a los que los animales van em base a si comieron o no
+  # @return [Hash] hash con dos claves :alimentados y :no_alimentadoss a los que los animales van em base a si comieron o no
   def estado_animales
     estado_animales = {
       alimentados: [],
@@ -67,7 +67,7 @@ class Zoologico
   end
 
   # metodo para alimentar a todos los animales en base al stock de alimentos y elimina los alimentos consumidos
-  # @return [estado_animales] hash con los animales que comieron y los que no
+  # @return  [Hash] hash con los animales que comieron y los que no
   def alimentar_animales
     @animales.each do |animal|
       next if animal.comio

@@ -6,7 +6,7 @@ module Alimentos
 		class CarneVacuna < Alimento
 
 			# inicializamos un nuevo alimento con su nombre y su cantidad 
-			# @return CarneVacuna[Object]
+			# @return [CarneVacuna]
 			def initialize
 				@nombre = "CarneVaca"
 				self.cantidad = 0
@@ -29,7 +29,7 @@ module Alimentos
 
 			# inicializamos un nuevo alimento con su nombre y su cantidad 
 			
-			# @return CarnePorcina[Object]
+			# @return [CarnePorcina]
 			def initialize
 				@nombre = "CarneCerdo"
 				self.cantidad = 0
